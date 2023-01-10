@@ -1,6 +1,10 @@
 // Tutorial by http://youtube.com/CodeExplained
 // api key : 82005d27a116c2880c8f0fcb866998a0
-
+if (location.protocol === 'http:') {
+   url = 'http://api.openweathermap.org/data/2.5/weather?lat=21.1682895&lon=-101.6723306&units=imperial&APPID=ec50a6072ac189dee111acdd3a38ab9f';
+} else {
+   url = 'https://api.openweathermap.org/data/2.5/weather?lat=21.1682895&lon=-101.6723306&units=imperial&APPID=ec50a6072ac189dee111acdd3a38ab9f';
+}
 const iconElement = document.querySelector(".weather-icon");
 const tempElement = document.querySelector(".temperature-value p");
 const descElement = document.querySelector(".temperature-description p");
